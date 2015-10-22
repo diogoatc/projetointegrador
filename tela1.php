@@ -20,7 +20,7 @@
  		echo $dados['ra']."<br/>";
  		echo $dados['externo']."<br/>";
  	}
- 	
+ 	mysqli_close($mysqli);
 }
 if(isset($_POST['pesquisa'])){
 pesquisaaluno();
