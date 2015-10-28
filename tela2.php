@@ -8,6 +8,9 @@ $aluno=$x->lista();
 
 
 ?>
+<html>
+<head></head>
+<body>
 <table width='200' border='1' cellpadding='1'>
   <tr>
   	<th>RA </th>
@@ -23,9 +26,10 @@ $aluno=$x->lista();
   </tr>
   <tr>
   	<th>Regime</th>
-    <th><?=$aluno->interno?></th>
+    <th><?=$aluno->regime?></th>
   </tr>
 </table>
 
-
+</body>
+</html>
 

@@ -1,5 +1,5 @@
 <?php
-include 'tela1.php';
+
 	class Conecta{
 	 public  $conexao;
 		public function conectar(){
@@ -24,7 +24,7 @@ class listar extends Conecta{
 			
 			$a->ra=$row->ra;
 			$a->nome=$row->nome;
-			$a->interno=$row->interno;
+			$a->regime=$row->regime;
 			$a->curso=$row->curso;
 			
 		}
@@ -39,7 +39,7 @@ class listar extends Conecta{
  	public $ra;
  	public $nome;
  	public $curso;
- 	public $interno;
+ 	public $regime;
  	
  }
 		
