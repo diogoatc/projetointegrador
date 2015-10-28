@@ -1,30 +1,5 @@
 <?php
 
-class aluno{
-	public $ra;
-	public $nome;
-	public $turma;
-	public $externo;
-	
-	public $host   ='localhost';
-	public $user   ='root';
-	public $pw     ='';
-	public $db     ='alunos';
-	
-		function pesquisara($ra){
-			$this->conecta_bd();
-			
-			$this->ra =$ra;
-			
-		}
-	
-	
-}
-
-
-
-
-
 class alunos{
 	private $nome;
 	private $ra;
@@ -52,17 +27,18 @@ class alunos{
  		$dadosexterno=$dados['externo'];
  		$dadoscurso=$dados['curso'];
  	}
- 		return $dadosnome;
- 		return $dadosra;
- 		return $dadosexterno;
- 		return $dadosturma;
- 		echo $dadosnome;
+ 		echo $dadosnome."<br/>";
+ 		echo $dadosra."<br/>";
+ 		echo $dadosexterno."<br/>";
+ 		echo $dadoscurso."<br/>";
+ 		
  	mysqli_close($mysqli);
 }
 }
 
 if (isset ( $_POST ['pesquisa'] )) {
-	alunos.pesquisaaluno ();
+	$x=new  alunos();
+	$x->pesquisaaluno();
 }
 ?>
 
