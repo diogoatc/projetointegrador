@@ -1,7 +1,7 @@
 <?php
-
+include 'tela1.php';
 	class Conecta{
-	public $conexao;
+	 public  $conexao;
 		public function conectar(){
 		
 		$servidor= 'localhost';
@@ -15,18 +15,17 @@
 	}
 class listar extends Conecta{
 	
-	public function lista(){
-		$ra="104696";
+	public  function lista(){
+		$ra=$_POST['ra'];
 		$this->conectar();
 		$rs= $this->conexao->query("SELECT * FROM aluno WHERE ra=$ra");
 		$a=new Aluno();
 		while ($row= $rs->fetch(PDO::FETCH_OBJ)){
 			
 			$a->ra=$row->ra;
-			$this->saidara= $row->ra. "<br/>";
-			$this->saidanome= $row->nome. "<br/> ";
-			$this->saidacurso=$row->curso."<br/>";
-			$this->saidaexterno=$row->externo."<br/>";
+			$a->nome=$row->nome;
+			$a->interno=$row->interno;
+			$a->curso=$row->curso;
 			
 		}
 		return $a;
@@ -38,11 +37,13 @@ class listar extends Conecta{
 }
  class Aluno{
  	public $ra;
+ 	public $nome;
+ 	public $curso;
+ 	public $interno;
  	
  }
 		
-$x=new listar();
-$aluno=$x->lista();
+
 	
 
 
