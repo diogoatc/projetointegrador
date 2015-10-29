@@ -8,24 +8,29 @@ $x = new listar ();
 $aluno = $x->lista ();
 
 ?>
+<html>
+<head></head>
+<body>
 <table width='200' border='1' cellpadding='1'>
-	<tr>
-		<th>RA</th>
-		<th><?=$aluno->ra?></th>
-	</tr>
-	<tr>
-		<th>Nome</th>
-		<th><?=$aluno->nome?></th>
-	</tr>
-	<tr>
-		<th>Curso</th>
-		<th><?=$aluno->curso?></th>
-	</tr>
-	<tr>
-		<th>Regime</th>
-		<th><?=$aluno->interno?></th>
-	</tr>
+
+  <tr>
+  	<th>RA </th>
+    <th><?=$aluno->ra?></th>
+  </tr>
+  <tr>
+  	<th>Nome</th>
+    <th><?=$aluno->nome?></th>
+  </tr>
+  <tr>
+  	<th>Curso</th>
+    <th><?=$aluno->curso?></th>
+  </tr>
+  <tr>
+  	<th>Regime</th>
+    <th><?=$aluno->regime?></th>
+</tr>
 </table>
 
-
+</body>
+</html>
 

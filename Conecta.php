@@ -1,9 +1,11 @@
 <?php
-include 'tela1.php';
-class Conecta {
-	public $conexao;
-	public function conectar() {
-		$servidor = 'localhost';
+
+	class Conecta{
+	 public  $conexao;
+		public function conectar(){
+		
+		$servidor= 'localhost';
+
 		$bd = 'alunos';
 		$senha = '';
 		$usuario = 'root';
@@ -19,19 +21,36 @@ class listar extends Conecta {
 		$a = new Aluno ();
 		while ( $row = $rs->fetch ( PDO::FETCH_OBJ ) ) {
 			
+
 			$a->ra = $row->ra;
 			$a->nome = $row->nome;
 			$a->interno = $row->interno;
 			$a->curso = $row->curso;
+
+			$a->ra=$row->ra;
+			$a->nome=$row->nome;
+			$a->regime=$row->regime;
+			$a->curso=$row->curso;
+			
+
 		}
 		return $a;
 	}
 }
-class Aluno {
-	public $ra;
-	public $nome;
-	public $curso;
-	public $interno;
-}
+
+
+
+ class Aluno{
+ 	public $ra;
+ 	public $nome;
+ 	public $curso;
+ 	public $regime;
+ 	
+ }
+		
+
+	
+
+
 
 ?>
