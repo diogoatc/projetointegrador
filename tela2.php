@@ -1,11 +1,11 @@
-<?php 
-if (isset($_POST['envia']))
-?>
 <?php
-include 'Conecta.php';
-$x=new listar();
-$aluno=$x->lista();
+if (isset ( $_POST ['envia'] ))
+	?>
+<?php
 
+include 'Conecta.php';
+$x = new listar ();
+$aluno = $x->lista ();
 
 ?>
 <!DOCTYPE html>
@@ -17,8 +17,13 @@ $aluno=$x->lista();
 
 </head>
 <body>
+<<<<<<< HEAD
 <div class="informacoesaluno">
 <table id="tabelainformacao"width='200' border='1' cellpadding='1'>
+=======
+<table width='200' border='1' cellpadding='1'>
+
+>>>>>>> branch 'master' of https://github.com/diogoatc/projetointegrador.git
   <tr>
   	<th>RA </th>
     <th><?=$aluno->ra?></th>
@@ -34,7 +39,7 @@ $aluno=$x->lista();
   <tr>
   	<th>Regime</th>
     <th><?=$aluno->regime?></th>
-  </tr>
+</tr>
 </table>
 </div>
 <div class="selectmaterial">
