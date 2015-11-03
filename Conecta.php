@@ -22,10 +22,6 @@ class listar extends Conecta {
 		while ( $row = $rs->fetch ( PDO::FETCH_OBJ ) ) {
 			
 
-			$a->ra = $row->ra;
-			$a->nome = $row->nome;
-			$a->interno = $row->interno;
-			$a->curso = $row->curso;
 
 			$a->ra=$row->ra;
 			$a->nome=$row->nome;
