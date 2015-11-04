@@ -1,21 +1,23 @@
 <?php
 include "Conecta.php";
-include "tela2.php";
-$raaluno=$aluno->ra;
+
 class inseremateriais extends Conecta{
 	
 	public function insere(){
-		
-		global $raaluno;
+		try{
+		$this->conectar();
+		$ra=$_POST['raaluno'];
 		$material=$_POST['materiais'];
 		
-			$sql="INSERT INTO relac_aluno_material(ra,id) VALUES(:ra,:id)";
-			$stmt=$pdo->prepare($sql);
-			$stmt->bindParam(':ra', $raaluno,PDO::PARAM_INT);
+			$sql="INSERT INTO relac_aluno_material(ra_aluno,id_material) VALUES(:ra,:id)";
+			$stmt=$this->conexao->prepare($sql);
+			$stmt->bindParam(':ra', $ra,PDO::PARAM_INT);
 			$stmt->bindParam(':id', $material,PDO::PARAM_INT);
 			
 			$stmt->execute();
-		
+		}catch (Exception $e){
+			echo 'Error: ' . $e->getMessage();
+		}
 		
 		
 		
@@ -23,6 +25,7 @@ class inseremateriais extends Conecta{
 	
 }
 
-
-
+$x= new inseremateriais();
+$x->insere();
+header("location:tela3.php");
 ?>

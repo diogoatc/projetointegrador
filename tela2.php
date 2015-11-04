@@ -44,6 +44,7 @@ $aluno = $x->lista ();
 </div>
 <div class="selectmaterial">
 <form method="post" action="selecionamat.php" id="selecionamat">
+<input type="hidden" name="raaluno" value="<?=$aluno->ra?>">
 <select name="materiais">
   <option value="2">Bola de Basquete</option>
   <option value="1">Bola de Futebol</option>
