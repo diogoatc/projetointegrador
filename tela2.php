@@ -43,12 +43,12 @@ $aluno = $x->lista ();
 </table>
 </div>
 <div class="selectmaterial">
-<form>
-<select>
-  <option value="bolabasquete">Bola de Basquete</option>
-  <option value="bolafutebol">Bola de Futebol</option>
-  <option value="bolavolei">Bola de Vôlei</option>
-  <option value="bolahandball">Bola de Handball</option>
+<form method="post" action="selecionamat.php" id="selecionamat">
+<select name="materiais">
+  <option value="2">Bola de Basquete</option>
+  <option value="1">Bola de Futebol</option>
+  <option value="3">Bola de Vôlei</option>
+  <option value="4">Bola de Handball</option>
   	
 </select>
 <input type="submit" value="Escolher material" name="seleciona">
