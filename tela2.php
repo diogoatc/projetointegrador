@@ -51,7 +51,7 @@ $aluno = $x->lista ();
   <option value="bolahandball">Bola de Handball</option>
   	
 </select>
-<input type="submit" name="seleciona">
+<input type="submit" value="Escolher material" name="seleciona">
 </form>
 
 </div>
