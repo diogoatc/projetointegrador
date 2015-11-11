@@ -7,6 +7,7 @@ include 'Conecta.php';
 $x = new listar ();
 $aluno = $x->lista ();
 
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -59,4 +60,21 @@ $aluno = $x->lista ();
 
 </body>
 </html>
+
+<?php 
+$con=new PDO("mysql:host=localhost;dbname=alunos",'root', '');
+$ra=$_POST['ra'];
+$consulta = $con->query("SELECT ra_aluno FROM relac_aluno_material WHERE ra_aluno=$ra" );
+$consulta->execute();
+$row = $consulta->rowCount();
+if($row>0){
+	header('Location: paginaerro.php');
+	//echo "location:href='tela3.php";
+}
+
+
+?>
+
+
+
 
