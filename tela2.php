@@ -1,6 +1,15 @@
 <?php
-if (isset ( $_POST ['envia'] ))
-	?>
+if (isset ( $_POST ['envia']) )
+
+?>
+
+<?php 
+if($_POST['ra']==""){
+	echo "ERRO";
+	header("refresh: 1;tela1.php");
+}
+?>
+
 <?php
 
 include 'Conecta.php';
@@ -9,6 +18,8 @@ $aluno = $x->lista ();
 
 
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>

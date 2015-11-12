@@ -19,7 +19,7 @@ class listar extends Conecta {
 		$this->conectar ();
 		$rs = $this->conexao->query ( "SELECT * FROM aluno WHERE ra=$ra" );
 		$a = new Aluno ();
-		while ( $row = $rs->fetch ( PDO::FETCH_OBJ ) ) {
+		while ( @$row = $rs->fetch ( PDO::FETCH_OBJ ) ) {
 			
 
 
@@ -69,7 +69,17 @@ class listar extends Conecta {
  
  }
  
-
-
+/*	class deleta extends Conecta{
+		public function deletamaterial(){
+			$id=$_GET['id'];
+			$this->conectar();
+			$rs=$this->conexao->query("DELETE FROM relac_aluno_material WHERE ordemservico=$id");
+			$rs->execute();
+			header("refresh: 0.0;tela3.php");
+			
+		}
+		
+	}
+*/
 
 ?>
