@@ -6,5 +6,6 @@
 
 
 </form>
+<a href="tela3.php">Lista de emprestados</a>
 </body>
 </html>
