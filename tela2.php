@@ -23,15 +23,67 @@ $aluno = $x->lista ();
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="tela2style.css" />
-<title>Segunda tela</title>
+<script type="text/javascript">
+function Nova()
+{
+location.href=" tela1.php"
+}
+</script>
 
+	<title>Ginasio poliesportivo</title>
+<style>			
+			body{
+				background-color: #00BFFF;
+			}
+
+
+				.info{
+					position: fixed;
+					left: 25%;
+					top: 25%;
+
+				}
+				
+				.menu{
+                  		 position: fixed;
+						left: 50%;
+						top: 25%;
+						
+						
+				}
+
+				.container{
+         
+        		background-color: white;
+        		left: 20%;
+        		width: 700px;
+    			height: 400px;    
+    			padding: 50px;
+    			border: 4px solid black;
+    			border-radius: 40px;
+    			position: relative;
+    			margin-top: 10%;
+
+				}
+
+				.botao {
+				left: 50%;
+				bottom: 25%;
+				position: fixed;
+				 
+				}				
+				
+
+
+</style>
 </head>
-<body>
+<body> 
 
-<div class="informacoesaluno">
-<table id="tabelainformacao"width='200' border='1' cellpadding='1'>
+		<div class="container">
+
+		<div class="info">
+		
+		<table width='200' border='1' cellpadding='1'>
 
 
 
@@ -53,24 +105,36 @@ $aluno = $x->lista ();
     <th><?=$aluno->regime?></th>
 </tr>
 </table>
-</div>
-<div class="selectmaterial">
-<form method="post" action="selecionamat.php" id="selecionamat">
-<input type="hidden" name="raaluno" value="<?=$aluno->ra?>">
-<select name="materiais">
-  <option value="2">Bola de Basquete</option>
-  <option value="1">Bola de Futebol</option>
-  <option value="3">Bola de Vôlei</option>
-  <option value="4">Bola de Handball</option>
-  	
-</select>
-<input type="submit" value="Escolher material" name="seleciona">
-</form>
 
-</div>
+		</div>
+		<div class="menu">
+
+			<form method="post" action="selecionamat.php" id="selecionamat">
+	<input type="hidden" name="raaluno" value="<?=$aluno->ra?>">
+		<select name="materiais">
+  			<option value="2">Bola de Basquete</option>
+  			<option value="1">Bola de Futebol</option>
+  			<option value="3">Bola de Vôlei</option>
+  			<option value="4">Bola de Handball</option>
+  		
+		<input type="submit" value="Escolher material" name="seleciona">
+		
+		</select>
+	
+			</form>
+
+		</div>
+		<div class="botao">
+		<input type="submit" value="Menu Inicial"  onClick="Nova()">
+		</div>
+		</div>
+
+
+
 
 </body>
 </html>
+
 
 <?php 
 $con=new PDO("mysql:host=localhost;dbname=alunos",'root', '');
@@ -85,7 +149,3 @@ if($row>0){
 
 
 ?>
-
-
-
-
