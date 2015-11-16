@@ -32,7 +32,7 @@
     			height: 400px;    
     			padding: 50px;
     			border: 4px solid black;
-    			border-radius: 40px;
+    	
     			position: relative;
     			margin-top: 10%;
 

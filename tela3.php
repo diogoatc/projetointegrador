@@ -20,13 +20,6 @@ body{
 
 }
 
-.menu{
-	position: relative;
-	left: 74%;
-	bottom: 57%;
-	position: relative;
-	margin-top: 40%;
-}
 
 .container{
 	 
@@ -34,12 +27,12 @@ body{
 	left: 20%;
 	width: 700px;
 	height: 400px;
-	padding: 50px;
+	padding: 10px;
 	border: 4px solid black;
-	border-radius: 40px;
+	
 	position: relative;
 	margin-top: 10%;
-	overflow:auto;
+	overflow:scroll;
 }
 
 .devo {
@@ -48,11 +41,10 @@ body{
 	position: relative;
 	margin-top: 40%;
 }
-.menu {
-	left: 85%;
-	bottom: 0.5%;
+.Menu {
+	left: 20%;
+	top: 10%;
 	position: absolute;
-	margin-top: 40%;
 }
 
 
@@ -90,16 +82,16 @@ echo "
 echo "</table>";
 
 ?>
+
+
+
+
+
+</div>
+
 <div class="Menu">
-<input type="button" value="Menu Inicial" onClick="Nova()">
+<input type="image" src="imgs/home.png" width="50px" height="50px" onClick="Nova()">
 </div>
-
-
-
-
-</div>
-
-
 
 
 

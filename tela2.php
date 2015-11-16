@@ -60,7 +60,6 @@ location.href=" index.php"
     			height: 400px;    
     			padding: 50px;
     			border: 4px solid black;
-    			border-radius: 40px;
     			position: relative;
     			margin-top: 10%;
 
@@ -116,16 +115,13 @@ location.href=" index.php"
   			<option value="1">Bola de Futebol</option>
   			<option value="3">Bola de Vôlei</option>
   			<option value="4">Bola de Handball</option>
-  		
-		<input type="submit" value="Escolher material" name="seleciona">
-		
 		</select>
-	
+	<input type="submit" value="Escolher material" name="seleciona">
 			</form>
 
 		</div>
 		<div class="botao">
-		<input type="submit" value="Menu Inicial"  onClick="Nova()">
+		<input type="image" src="imgs/home.png" width="50px" height="50px" onClick="Nova()">
 		</div>
 		</div>
 
@@ -144,7 +140,7 @@ $consulta->execute();
 $row = $consulta->rowCount();
 if($row>0){
 	header('Location: paginaerro.php');
-	//echo "location:href='tela3.php";
+	
 }
 
 

@@ -24,7 +24,7 @@ location.href=" tela3.php"
 	}
 	.button{
 		
-		left: 74%;
+		left: 70%;
 		bottom: 10%;
 		position: absolute;
 		margin-top: 25%; 	
@@ -35,15 +35,20 @@ location.href=" tela3.php"
         left: 20%;
         width: 700px;
     	height: 400px;    
-    	padding: 50px;
+    	padding: 10px;
     	border: 4px solid black;
-    	border-radius: 40px;
     	position: relative;
     	margin-top: 10%;
 		
 
     	}
-	
+	.input{
+			position:absolute;
+			top:22%;
+			left:28%;
+			width:23px;
+			height:23px;
+	}
 
 </style>
 </head>
@@ -54,12 +59,12 @@ location.href=" tela3.php"
 
 					<form action="tela2.php" name="pesquisa" method="post">
 					<h3>Insira o RA: </h3>
-	<input type="text" name="ra"> <input type="submit" value="Pesquisar" name="pesquisa">
+	<input type="text" name="ra"> <input class="input" name="pesquisa" type="image" src="imgs/search.png" >
 
 
 </form>
 <div class="button">
-<input type="button" value="Materiais Emprestados" onClick="Nova()">
+<input type="image" src="imgs/materiais.png" width="200px" height="100px" onClick="Nova()">
 </div>
 	
 
