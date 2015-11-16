@@ -6,7 +6,7 @@ if (isset ( $_POST ['envia']) )
 <?php 
 if($_POST['ra']==""){
 	echo "ERRO";
-	header("refresh: 1;tela1.php");
+	header("refresh: 1;index.php");
 }
 ?>
 
@@ -26,7 +26,7 @@ $aluno = $x->lista ();
 <script type="text/javascript">
 function Nova()
 {
-location.href=" tela1.php"
+location.href=" index.php"
 }
 </script>
 

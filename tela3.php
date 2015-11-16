@@ -4,7 +4,7 @@
 <script type="text/javascript">
 function Nova()
 {
-location.href=" tela1.php"
+location.href=" index.php"
 }
 </script>
 <style>
@@ -84,7 +84,7 @@ echo "
     				<td width='20%'>$mat->raaluno</td>
     				<td width='20%'>$mat->materiais</td>
     				<td width='20%'><a href='deleta.php?id=$id'> DEVOLVER </a>  </td>
-
+   
   				</tr>
 				"; }
 echo "</table>";
