@@ -68,10 +68,10 @@ class listar extends Conecta {
  
  
  }
+ //TODO: Implementar a classe deleta para chamar na tela2
  
-/*	class deleta extends Conecta{
-		public function deletamaterial(){
-			$id=$_GET['id'];
+	class deleta extends Conecta{
+		public function deletamaterial($id){
 			$this->conectar();
 			$rs=$this->conexao->query("DELETE FROM relac_aluno_material WHERE ordemservico=$id");
 			$rs->execute();
@@ -80,6 +80,6 @@ class listar extends Conecta {
 		}
 		
 	}
-*/
+
 
 ?>
