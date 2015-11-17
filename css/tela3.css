@@ -24,7 +24,7 @@ body{
 	
 	position: relative;
 	margin-top: 10%;
-	overflow:scroll;
+	overflow:auto;
 }
 
 .devo {

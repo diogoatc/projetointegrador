@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 17-Nov-2015 às 02:11
+-- Generation Time: 17-Nov-2015 às 17:22
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `materiais` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `materiais` varchar(512) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Extraindo dados da tabela `materiais`
@@ -83,7 +83,8 @@ INSERT INTO `materiais` (`id`, `materiais`) VALUES
 (7, 'Coletes'),
 (8, 'Bola de futsal'),
 (9, 'Bola quadra de areia'),
-(10, 'Bicicleta');
+(10, 'Bicicleta'),
+(11, 'Bola de Vôlei de areia');
 
 -- --------------------------------------------------------
 
@@ -96,30 +97,14 @@ CREATE TABLE IF NOT EXISTS `relac_aluno_material` (
   `ra_aluno` int(11) DEFAULT NULL,
   `id_material` int(11) DEFAULT NULL,
   PRIMARY KEY (`ordemservico`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=53 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
 
 --
 -- Extraindo dados da tabela `relac_aluno_material`
 --
 
 INSERT INTO `relac_aluno_material` (`ordemservico`, `ra_aluno`, `id_material`) VALUES
-(34, 104696, 2),
-(35, 1, 2),
-(36, 2, 2),
-(37, 3, 2),
-(38, 4, 2),
-(39, 5, 1),
-(40, 6, 1),
-(41, 7, 3),
-(42, 8, 4),
-(43, 9, 2),
-(44, 10, 3),
-(45, 11, 2),
-(46, 12, 2),
-(47, 13, 1),
-(48, 14, 4),
-(51, 100461, 3),
-(52, 97528, 3);
+(57, 104696, 10);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
