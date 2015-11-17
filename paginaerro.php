@@ -3,51 +3,7 @@
 <html>
 <head>
 	<title>Ginasio poliesportivo</title>
-<style>			
-			body{
-				background-color: #00BFFF;
-			}
-
-
-				.info{
-					position: fixed;
-					left: 25%;
-					bottom: 50%;
-
-				}
-				
-				.menu{
-                  		 position: relative;
-						left: 74%;
-						bottom: 57%;
-						position: relative;
-						margin-top: 40%; 
-				}
-
-				.container{
-         
-        		background-color: white;
-        		left: 20%;
-        		width: 700px;
-    			height: 400px;    
-    			padding: 50px;
-    			border: 4px solid black;
-    	
-    			position: relative;
-    			margin-top: 10%;
-
-				}
-
-				.botao {
-				left: -5%;
-				bottom: 57%;
-				position: relative;
-				margin-top: 40%; 
-				}				
-				
-
-
-</style>
+	<link rel="stylesheet" type="text/css" href="css/paginaerro.css">
 </head>
 <body> 
 

@@ -31,50 +31,7 @@ location.href=" index.php"
 </script>
 
 	<title>Ginasio poliesportivo</title>
-<style>			
-			body{
-				background-color: #00BFFF;
-			}
-
-
-				.info{
-					position: fixed;
-					left: 25%;
-					top: 25%;
-
-				}
-				
-				.menu{
-                  		 position: fixed;
-						left: 50%;
-						top: 25%;
-						
-						
-				}
-
-				.container{
-         
-        		background-color: white;
-        		left: 20%;
-        		width: 700px;
-    			height: 400px;    
-    			padding: 50px;
-    			border: 4px solid black;
-    			position: relative;
-    			margin-top: 10%;
-
-				}
-
-				.botao {
-				left: 50%;
-				bottom: 25%;
-				position: fixed;
-				 
-				}				
-				
-
-
-</style>
+<link rel="stylesheet" type="text/css" href="css/tela2.css">
 </head>
 <body> 
 
@@ -82,7 +39,7 @@ location.href=" index.php"
 
 		<div class="info">
 		
-		<table width='200' border='1' cellpadding='1'>
+		<table class="tabela">
 
 
 

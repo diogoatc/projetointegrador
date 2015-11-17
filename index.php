@@ -3,54 +3,11 @@
 <head>
 	<title>Ginasio poliesportivo</title>
 	<script type="text/javascript">
-function Nova()
-{
-location.href=" tela3.php"
-}
+		function Nova(){
+			location.href=" tela3.php"
+						}
 </script>
-	
-	<style>
-
-	body{
-				background-color: #00BFFF;
-			}
-	.ra{
-		
-		left: 5%;
-		bottom: 60%;
-		position: relative;
-		margin-top: 25%;
-
-	}
-	.button{
-		
-		left: 70%;
-		bottom: 10%;
-		position: absolute;
-		margin-top: 25%; 	
-	}
-	.container{
-         
-        background-color: white;
-        left: 20%;
-        width: 700px;
-    	height: 400px;    
-    	padding: 10px;
-    	border: 4px solid black;
-    	position: relative;
-    	margin-top: 10%;
-		
-
-    	}
-	.input{
-			position:absolute;
-			top:22%;
-			left:28%;
-			width:23px;
-			height:23px;
-	}
-
-</style>
+<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 			<div class="container">

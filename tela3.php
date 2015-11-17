@@ -7,48 +7,7 @@ function Nova()
 location.href=" index.php"
 }
 </script>
-<style>
-body{
-	background-color: #00BFFF;
-}
-
-
-.info{
-	position: fixed;
-	left: 25%;
-	bottom: 50%;
-
-}
-
-
-.container{
-	 
-	background-color: white;
-	left: 20%;
-	width: 700px;
-	height: 400px;
-	padding: 10px;
-	border: 4px solid black;
-	
-	position: relative;
-	margin-top: 10%;
-	overflow:scroll;
-}
-
-.devo {
-	left: 85%;
-	bottom: 57%;
-	position: relative;
-	margin-top: 40%;
-}
-.Menu {
-	left: 20%;
-	top: 10%;
-	position: absolute;
-}
-
-
-</style>
+<link rel="stylesheet" type="text/css" href="css/tela3.css">
 </head>
 <body>
 
@@ -75,7 +34,7 @@ echo "
     				<td width='20%'>$mat->ordemservico</td>
     				<td width='20%'>$mat->raaluno</td>
     				<td width='20%'>$mat->materiais</td>
-    				<td width='20%'><a href='deleta.php?id=$id'> DEVOLVER </a>  </td>
+    				<td width='20%'><a href='deleta.php?id=$id'> <img src='imgs/deleta.ico' width='20px' height='20px' /> </a>  </td>
    
   				</tr>
 				"; }
