@@ -1,12 +1,14 @@
+
+
 <?php
 if (isset ( $_POST ['envia']) )
 
 ?>
 
 <?php 
+
 if($_POST['ra']==""){
-	echo "ERRO";
-	header("refresh: 1;index.php");
+	header('location: erros/rainvalido.php');
 }
 ?>
 
@@ -15,11 +17,17 @@ if($_POST['ra']==""){
 include 'Conecta.php';
 $x = new listar ();
 $aluno = $x->lista ();
-
+	
 
 ?>
 
+<?php 
+if(isset($aluno->ra)==null){
+	header('Location: erros/rainvalido.php');
+	
+}
 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -103,7 +111,7 @@ $consulta = $con->query("SELECT ra_aluno FROM relac_aluno_material WHERE ra_alun
 $consulta->execute();
 $row = $consulta->rowCount();
 if($row>0){
-	header('Location: paginaerro.php');
+	header('Location: erros/matemprestado.php');
 	
 }
 
