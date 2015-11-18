@@ -63,7 +63,7 @@ class listar extends Conecta {
  		}
  		
  		
- 		return $todosmateriais;
+ 		return @$todosmateriais;
  	}
  
  

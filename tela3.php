@@ -1,7 +1,7 @@
 <html>
 <head>
-<!--  TODO: Alterar o nome da pagina para o nome do sistema -->
-<title>Ginasio poliesportivo</title>
+<title>SEME</title>
+<link rel="sortcut icon" href="imgs/logo.png" type="image/x-icon" />
 <script type="text/javascript">
 function Nova()
 {
@@ -17,6 +17,7 @@ location.href=" index.php"
 
 
 <?php
+error_reporting(0);
 include "Conecta.php";
 
 $x= new emprestados();
@@ -28,7 +29,7 @@ echo "<td> <strong>Ordem de Serviço</strong></td>
 	  <td> <strong>RA</strong> </td>
 	  <td> <strong>Material Emprestado</strong></td>
 	  <td> <strong>Devolver</strong></td>";
-foreach ($lista as $mat){
+ foreach ($lista as $mat){
 	$id=$mat->ordemservico;
 echo "
   				<tr>

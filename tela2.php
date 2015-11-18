@@ -37,8 +37,8 @@ function Nova()
 location.href=" index.php"
 }
 </script>
-<!--  TODO: Alterar o nome da pagina para o nome do sistema -->
-	<title>Ginasio poliesportivo</title>
+<link rel="sortcut icon" href="imgs/logo.png" type="image/x-icon" />
+	<title>SEME</title>
 <link rel="stylesheet" type="text/css" href="css/tela2.css">
 </head>
 <body> 

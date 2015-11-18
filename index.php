@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--  TODO: Alterar o nome da pagina para o nome do sistema -->
-	<title>Ginasio poliesportivo</title>
+
+	<title>SEME</title>
 	<script type="text/javascript">
 		function Nova(){
 			location.href=" tela3.php"
 						}
 </script>
 <link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="sortcut icon" href="imgs/logo.png" type="image/x-icon" />
 </head>
 <body>
 			<div class="container">
