@@ -5,14 +5,14 @@ if (isset ( $_POST ['envia']) )
 
 ?>
 
-<?php 
+<?php   //ERRO de RA NULO
 
 if($_POST['ra']==""){
-	header('location: erros/rainvalido.php');
+	header('location: index.php?erro');
 }
 ?>
 
-<?php
+<?php //LISTAGEM DE TODOS AS INFORMAÇÕES DO ALUNO
 
 include 'Conecta.php';
 $x = new listar ();
@@ -21,9 +21,9 @@ $aluno = $x->lista ();
 
 ?>
 
-<?php 
+<?php //ERRO DE RA INCORRETO
 if(isset($aluno->ra)==null){
-	header('Location: erros/rainvalido.php');
+	header('Location: index.php?erro');
 	
 }
 
@@ -31,6 +31,7 @@ if(isset($aluno->ra)==null){
 <!DOCTYPE html>
 <html>
 <head>
+<!-- SCRIPT PARA REDIRECIONAR PARA O INDEX -->
 <script type="text/javascript">
 function Nova()
 {
@@ -72,7 +73,7 @@ location.href=" index.php"
 
 		</div>
 		<div class="menu">
-
+ <!-- TODO: Listar materiais diretamente do banco de dados (TCC)  -->
 			<form method="post" action="selecionamat.php" id="selecionamat">
 	<input type="hidden" name="raaluno" value="<?=$aluno->ra?>">
 		<select name="materiais">
@@ -104,14 +105,14 @@ location.href=" index.php"
 </html>
 
 
-<?php 
+<?php //VERIFICACAO DE MATERIAL JÁ EMPRESTADO
 $con=new PDO("mysql:host=localhost;dbname=alunos",'root', '');
 $ra=$_POST['ra'];
 $consulta = $con->query("SELECT ra_aluno FROM relac_aluno_material WHERE ra_aluno=$ra" );
 $consulta->execute();
 $row = $consulta->rowCount();
 if($row>0){
-	header('Location: erros/matemprestado.php');
+	header('Location: index.php?emprestado');
 	
 }
 

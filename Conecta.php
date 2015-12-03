@@ -43,6 +43,7 @@ class listar extends Conecta {
  	
  }
  class Material{
+ 	public $nomealuno;
  	public $raaluno;
  	public $ordemservico;
  	public $materiais;
@@ -51,11 +52,12 @@ class listar extends Conecta {
  class emprestados extends Conecta{
  	public function listatudo(){
  		$this->conectar();
- 		$rs=$this->conexao->query("SELECT relac_aluno_material.ordemservico as ordemservico,  relac_aluno_material.ra_aluno as raaluno, materiais.materiais as materiais FROM materiais INNER JOIN relac_aluno_material ON relac_aluno_material.id_material=materiais.id");
+ 		$rs=$this->conexao->query("SELECT relac_aluno_material.ordemservico as ordemservico, aluno.nome as nome, relac_aluno_material.ra_aluno as raaluno, materiais.materiais as materiais FROM materiais INNER JOIN relac_aluno_material ON relac_aluno_material.id_material=materiais.id INNER JOIN aluno ON relac_aluno_material.ra_aluno=aluno.ra");
  		
  		while ($row = $rs->fetch (PDO::FETCH_OBJ)){
  			
  			$b= new Material();
+ 			$b->nomealuno=$row->nome;
  			$b->raaluno=$row->raaluno;
  			$b->ordemservico=$row->ordemservico;
  			$b->materiais=$row->materiais;

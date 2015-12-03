@@ -2,6 +2,7 @@
 <head>
 <title>SEME</title>
 <link rel="sortcut icon" href="imgs/logo.png" type="image/x-icon" />
+<!-- SCRIPT PARA REDIRECIONAMENTO PARA A TELA 3 -->
 <script type="text/javascript">
 function Nova()
 {
@@ -17,25 +18,27 @@ location.href=" index.php"
 
 
 <?php
+// ADAPTAÇÃO TECNICA(GAMBI) PARA TIRAR O ERRO CASO A LISTA FIQUE VAZIA 
 error_reporting(0);
 include "Conecta.php";
 
 $x= new emprestados();
 $lista=$x->listatudo();
 
-
+// LISTAGEM DE TODOS OS MATERIAIS EMPRESTADOS
 echo "<table border='1' cellspacing='3' cellpadding='2'>";
-echo "<td> <strong>Ordem de Serviço</strong></td>
-	  <td> <strong>RA</strong> </td>
+echo "<td> <strong>RA</strong></td>
+	  <td> <strong>Nome do Aluno</strong> </td>
 	  <td> <strong>Material Emprestado</strong></td>
 	  <td> <strong>Devolver</strong></td>";
  foreach ($lista as $mat){
 	$id=$mat->ordemservico;
 echo "
   				<tr>
-    				<td width='20%'>$mat->ordemservico</td>
-    				<td width='20%'>$mat->raaluno</td>
+    				<td width='20%'><strong>$mat->raaluno</strong></td>
+    				<td width='20%'>$mat->nomealuno</td>
     				<td width='20%'>$mat->materiais</td>
+    				
     				<td width='20%'><a href='deleta.php?id=$id'> <img src='imgs/deleta.ico' width='20px' height='20px' /> </a>  </td>
    
   				</tr>

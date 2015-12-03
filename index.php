@@ -3,6 +3,7 @@
 <head>
 
 	<title>SEME</title>
+	<!-- SCRIPT PARA REDIRECIONAMENTO PARA A TELA 3 -->
 	<script type="text/javascript">
 		function Nova(){
 			location.href=" tela3.php"
@@ -22,6 +23,16 @@
 
 
 </form>
+
+<?php  //RESULTADO DA VERIFICAÇÃO DE ERROS 
+if(isset($_GET['erro'])){
+	echo '<p  class="erro">Erro: RA nulo ou não existente</p>';
+	
+}
+if (isset($_GET['emprestado'])){
+	echo '<p  class="erro">Erro: Aluno já possui material emprestado</p>';
+}
+?>
 <div class="button">
 <input type="image" src="imgs/materiais.png" width="200px" height="100px" onClick="Nova()">
 </div>
